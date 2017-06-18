@@ -54,7 +54,7 @@ namespace :deploy do
   task :update_jekyll do
     on roles(:app) do
       with rails_env: "#{fetch(:stage)}" do
-        execute "cd #{deploy_to}/current && #{rbenv_path}shims/bundle exec jekyll build"
+        execute "cd #{deploy_to}/current && #{fetch(:rbenv_path)}shims/bundle exec jekyll build"
       end
     end
   end
