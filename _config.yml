@@ -27,9 +27,6 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-multiple-languages-plugin
-exclude:
-  - Gemfile
-  - Gemfile.lock
 
 languages: ['en', 'ru']
 exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
