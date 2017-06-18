@@ -12,6 +12,17 @@ set :repo_url, 'git@github.com:lightalloy/light-jekyll.git'
 set :deploy_to, '/home/light/sites/light-jekyll'
 
 
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, '2.4.1'
+
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+
+# set :default_environment, { 'PATH' => '$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH' }
+
+set :rbenv_map_bins, %w[rake gem bundle rails]
+set :rbenv_roles, :all # default value
+set :rbenv_path, '/home/light/.rbenv/'
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -42,10 +53,8 @@ set :format, :pretty
 namespace :deploy do
   task :update_jekyll do
     on roles(:app) do
-      within "#{current_path}" do
-        with rails_env: "#{fetch(:stage)}" do
-          execute 'bundle exec jekyll build'
-        end
+      with rails_env: "#{fetch(:stage)}" do
+        execute "cd #{deploy_to}/current && #{rbenv_path}shims/bundle exec jekyll build"
       end
     end
   end
