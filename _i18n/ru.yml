@@ -1,0 +1,13 @@
+global:
+  tagline: Русский
+  about: О проекте
+  twitter: Twitter
+  github: GitHub
+langs:
+  ru: на русском
+  en: на английском
+pages:
+  example: example
+  includeexample: The following text is a Jekyll include liquid tag parameter
+titles:
+  pagination: Pagination
