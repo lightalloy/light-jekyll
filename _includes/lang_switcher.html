@@ -1,0 +1,7 @@
+<div class='lang-switcher'>
+  {% if site.lang == 'en' %}
+    <span class='current-lang'>en</span><a class="link-lang link-ru" title='На русском' href="{{ site.baseurl_root }}/ru{{page.url}}">ru</a>
+  {% else %}
+    <a class="link-lang link-en" href="{{ site.baseurl_root }}{{ page.url }}"  title='Switch to English'>en</a><span class='current-lang'>ru</span>
+  {% endif %}
+</div>

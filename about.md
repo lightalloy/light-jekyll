@@ -4,4 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Experiments with blogging and jekyll
+<img style="float: right;" alt='Me' src="/images/me.jpg">
+
+Hi. I'm Anna Buyanova, a (ruby) developer.
+Here are my experiments with blogging and jekyll.  
+[Personal site](http://litealloy.ru)
