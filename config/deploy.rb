@@ -2,7 +2,8 @@
 lock '3.8.2'
 
 set :application, 'light-jekyll'
-set :repo_url, 'git@github.com:lightalloy/light-jekyll.git'
+# set :repo_url, 'git@github.com:lightalloy/light-jekyll.git'
+set :repo_url, 'git@git.s3n.su:light/light-jekyll.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
