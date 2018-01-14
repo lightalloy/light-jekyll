@@ -1,5 +1,7 @@
 <header class="site-header" role="banner">
-  {% include yandex-metrika.html %}
+  {% if jekyll.environment == 'production' %}
+    {% include yandex-metrika.html %}
+  {% endif %}
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
