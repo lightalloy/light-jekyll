@@ -34,3 +34,5 @@ exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.
 default_lang: 'en'
 minima:
   date_format: '%d.%m.%Y'
+disqus:
+  shortname: blog-litealloy-ru
